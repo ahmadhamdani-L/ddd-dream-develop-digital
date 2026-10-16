@@ -1,67 +1,216 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
-    <meta name="google-site-verification" content="elq7sVRh7Zw_R8PEKuA9zt0aNJjF54gyupmOGPsQkN0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DDD DREAM DEVELOP DIGITAL - Professional IT & Software Services</title>
+    <title>DDD DREAM DEVELOP DIGITAL — Next-Gen Software & API Engineering</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     
-    <!-- SALIN META TAG VERIFIKASI GOOGLE SEARCH CONSOLE DI SINI NANTI -->
-    <!-- Contoh: <meta name="google-site-verification" content="KODE_ANDA" /> -->
+    <!-- SALIN META TAG VERIFIKASI GOOGLE SEARCH CONSOLE DI SINI -->
+    <!-- <meta name="google-site-verification" content="KODE_SEARCH_CONSOLE_ANDA" /> -->
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col justify-between">
+<body class="bg-[#0b0f19] text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Ambient Background Glows -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-tr from-brand-600/20 via-purple-600/10 to-transparent blur-[120px] pointer-events-none -z-10"></div>
+    <div class="fixed bottom-0 right-0 w-[500px] h-[500px] bg-brand-500/10 blur-[150px] pointer-events-none -z-10"></div>
 
     <!-- Header / Navbar -->
-    <header class="max-w-6xl mx-auto w-full px-6 py-6 flex justify-between items-center border-b border-slate-800">
-        <h1 class="text-xl font-bold tracking-wider text-blue-400">DDD DREAM DEVELOP DIGITAL</h1>
-        <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">Hubungi Kami</a>
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#0b0f19]/70 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-brand-500/25 group-hover:scale-105 transition-transform duration-300">
+                    D3
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold tracking-tight text-white group-hover:text-brand-400 transition-colors">DDD DREAM DEVELOP DIGITAL</span>
+                    <span class="text-[10px] tracking-widest text-slate-400 uppercase font-semibold">Engineering & Digital Solutions</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-white transition-colors">Layanan</a>
+                <a href="#tech" class="hover:text-white transition-colors">Tech Stack</a>
+                <a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+            </nav>
+
+            <a href="#contact" class="bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg shadow-brand-600/20 hover:shadow-brand-600/40 transition-all duration-300 transform hover:-translate-y-0.5">
+                Hubungi Kami
+            </a>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <main class="max-w-4xl mx-auto px-6 py-16 text-center">
-        <h2 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-6">
-            Layanan Pengembangan Perangkat Lunak & API Profesional
-        </h2>
-        <p class="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-            Membangun sistem backend handal, API performa tinggi (Golang), integrasi AI, serta solusi digital terintegrasi untuk bisnis Anda.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#services" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-6 py-3 rounded-lg border border-slate-700 transition">Layanan Kami</a>
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-lg transition">Konsultasi Gratis</a>
+    <section class="max-w-7xl mx-auto px-6 pt-20 pb-24 text-center relative">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-8 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+            Software & API Specialist
         </div>
-    </main>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.15] max-w-5xl mx-auto mb-8">
+            Membangun Sistem Performan Tinggi & <span class="bg-gradient-to-r from-brand-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">Arsitektur Digital Masa Depan</span>
+        </h1>
+
+        <p class="text-slate-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed mb-10 font-normal">
+            Kami menghadirkan rekayasa perangkat lunak skala enterprise, arsitektur microservices berbasis <strong class="text-slate-200">Golang</strong>, integrasi AI, serta backend cloud resilient untuk mengakselerasi bisnis Anda.
+        </p>
+
+        <div class="flex flex-wrap justify-center items-center gap-4">
+            <a href="#contact" class="bg-white text-slate-900 font-bold px-8 py-4 rounded-xl hover:bg-slate-100 transition-all shadow-xl shadow-white/10 hover:shadow-white/20 transform hover:-translate-y-0.5">
+                Konsultasi Proyek
+            </a>
+            <a href="#services" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl border border-slate-700/80 transition-all backdrop-blur-md">
+                Eksplor Layanan
+            </a>
+        </div>
+    </section>
+
+    <!-- Tech Stack / Expertise Banner -->
+    <section id="tech" class="border-y border-slate-800/80 bg-slate-900/40 backdrop-blur-md py-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 md:gap-16 text-slate-400 font-medium text-sm">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Golang Architecture
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-400"></span> High-Concurrency API
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-purple-400"></span> AI Data & Model Integration
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Cloud & Supabase Infrastructure
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
-    <section id="services" class="max-w-5xl mx-auto px-6 py-12">
-        <h3 class="text-2xl font-bold text-center text-white mb-10">Keahlian & Layanan</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                <h4 class="text-lg font-semibold text-blue-400 mb-2">Backend & API Development</h4>
-                <p class="text-slate-400 text-sm">Spesialisasi arsitektur microservices dan API cepat berbasis Golang.</p>
+    <section id="services" class="max-w-7xl mx-auto px-6 py-28">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-xs font-bold text-brand-400 uppercase tracking-widest mb-3">Layanan Unggulan</h2>
+            <p class="text-3xl sm:text-4xl font-extrabold text-white">Solusi Digital Berstandar Tinggi</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="group relative bg-slate-900/60 p-8 rounded-2xl border border-slate-800 hover:border-brand-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-500/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Backend & API Engineering</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Pengembangan REST & gRPC API performa tinggi menggunakan Golang. Dirancang khusus untuk efisiensi memori, skalabilitas tinggi, dan *latency* rendah.
+                    </p>
+                </div>
+                <div class="text-xs font-semibold text-brand-400 flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Golang • Microservices • Database Design &rarr;
+                </div>
             </div>
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                <h4 class="text-lg font-semibold text-blue-400 mb-2">AI & Cloud Integration</h4>
-                <p class="text-slate-400 text-sm">Integrasi model AI, database Supabase, dan deployment Cloud Infrastructure.</p>
+
+            <!-- Card 2 -->
+            <div class="group relative bg-slate-900/60 p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Integrasi AI & Cloud</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Implementasi kecerdasan buatan, integrasi *LLM Pipeline*, database cloud berbasis Supabase, dan arsitektur deployment terintegrasi.
+                    </p>
+                </div>
+                <div class="text-xs font-semibold text-indigo-400 flex items-center gap-1 group-hover:gap-2 transition-all">
+                    AI Workflows • Supabase • Cloud Deployment &rarr;
+                </div>
             </div>
-            <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
-                <h4 class="text-lg font-semibold text-blue-400 mb-2">Custom Software Solutions</h4>
-                <p class="text-slate-400 text-sm">Pengembangan aplikasi web kustom skala kecil hingga enterprise.</p>
+
+            <!-- Card 3 -->
+            <div class="group relative bg-slate-900/60 p-8 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Pengembangan Aplikasi Kustom</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Solusi perangkat lunak *end-to-end* yang disesuaikan secara khusus dengan alur bisnis bisnis modern dan siap digunakan untuk skala besar.
+                    </p>
+                </div>
+                <div class="text-xs font-semibold text-purple-400 flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Web Systems • Custom Platform • Enterprise &rarr;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section (Wajib untuk Google Play Console) -->
+    <section id="privacy" class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-800/80">
+        <div class="bg-slate-900/40 border border-slate-800 p-8 sm:p-12 rounded-3xl backdrop-blur-md">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                Kebijakan Privasi (Privacy Policy)
+            </h2>
+            <div class="space-y-4 text-sm text-slate-400 leading-relaxed">
+                <p>
+                    Selamat datang di <strong class="text-slate-200">DDD DREAM DEVELOP DIGITAL</strong>. Kami berkomitmen penuh untuk menjaga kepercayaan dan melindungi privasi informasi pengguna layanan serta aplikasi yang kami kembangkan.
+                </p>
+                <h3 class="text-base font-semibold text-slate-200 mt-6">1. Pengumpulan & Penggunaan Data</h3>
+                <p>
+                    Kami tidak mengumpulkan Informasi Identitas Pribadi (PII) dari pengguna secara tanpa izin. Segala informasi yang dikirimkan secara sukarela hanya digunakan untuk kebutuhan penyediaan dan peningkatan kualitas aplikasi.
+                </p>
+                <h3 class="text-base font-semibold text-slate-200 mt-6">2. Keamanan Sistem</h3>
+                <p>
+                    Seluruh infrastruktur aplikasi dan layanan dilindungi oleh protokol keamanan standar industri guna mencegah risiko akses ilegal, perubahan, atau kebocoran data.
+                </p>
+                <h3 class="text-base font-semibold text-slate-200 mt-6">3. Kontak Penanggung Jawab</h3>
+                <p>
+                    Apabila ada pertanyaan mengenai kebijakan privasi ini atau permohonan terkait data, Anda dapat menghubungi tim kami melalui saluran komunikasi resmi perusahaan.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
-        <p>&copy; 2026 DDD DREAM DEVELOP DIGITAL. All rights reserved.</p>
+    <footer id="contact" class="border-t border-slate-800/80 bg-slate-950 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-sm">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-bold text-white text-sm">
+                    D3
+                </div>
+                <span class="text-slate-300 font-semibold">DDD DREAM DEVELOP DIGITAL</span>
+            </div>
+            <p>&copy; 2026 DDD DREAM DEVELOP DIGITAL. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#privacy" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-slate-300 transition-colors">Kembali ke Atas &uarr;</a>
+            </div>
+        </div>
     </footer>
-
-    <section id="privacy" class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-800 text-slate-400 text-sm">
-    <h3 class="text-xl font-bold text-white mb-4">Kebijakan Privasi (Privacy Policy)</h3>
-    <p class="mb-3">DDD DREAM DEVELOP DIGITAL berkomitmen untuk melindungi privasi pengguna kami. Kami tidak mengumpulkan data pribadi tanpa izin eksplisit dari pengguna.</p>
-    <p>Jika Anda memiliki pertanyaan mengenai kebijakan privasi ini, Anda dapat menghubungi kami melalui kontak resmi yang tertera di situs ini.</p>
-    </section>
 
 </body>
 </html>
